@@ -1,0 +1,35 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.benz.tutorial.jhipster.gateway"
+    },
+    "jhipsterVersion": "4.14.0",
+    "baseName": "jhipstermscvsgateway",
+    "packageName": "com.benz.tutorial.jhipster.gateway",
+    "packageFolder": "com/benz/tutorial/jhipster/gateway",
+    "serverPort": "8084",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "d9706f7df0cccb9065ab82b8f57fd33dae82e3d5",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "yarn",
+    "applicationType": "gateway",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}
