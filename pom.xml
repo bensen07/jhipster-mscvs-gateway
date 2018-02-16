@@ -582,8 +582,9 @@
                             <apiPackage>com.benz.tutorial.jhipster.gateway.web.api</apiPackage>
                             <modelPackage>com.benz.tutorial.jhipster.gateway.web.api.model</modelPackage>
                             <generateSupportingFiles>false</generateSupportingFiles>
+                            <output>${project.basedir}</output>
                             <configOptions>
-                                <interfaceOnly>true</interfaceOnly>
+                                <interfaceOnly>false</interfaceOnly>
                                 <java8>true</java8>
                             </configOptions>
                         </configuration>

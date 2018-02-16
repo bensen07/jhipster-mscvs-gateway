@@ -1,6 +1,82 @@
-# API-first development with swagger
-# This file will be used at compile time to generate Spring-MVC endpoint stubs using swagger-codegen
-swagger: "2.0"
+swagger:                           "2.0"
 info:
-  version: 0.0.1
-paths: {}
+  title:                           Jhipster generated gateway project
+  version:                         0.0.1
+paths:                             
+  /movies:                         
+    get:
+      tags:
+        - movies
+      summary:                     Gets all the movies. Even helps do search by title
+      x-swagger-router-controller: MoviesController            
+      operationId:                 getAllMovies
+      consumes:                    
+        - application/xml
+        - application/json
+      produces:                    
+        - application/xml
+        - application/json
+      responses:
+        "200":
+          description:             Successful response
+          examples:
+            application/json:      |-
+                [
+                  {
+                    "title":       "Once Upon a Time in the West",
+                    "year":        "1968",
+                    "rated":       "PG-13",
+                    "released":    "-32468400000",
+                    "countries":   [
+                        "Italy",
+                        "USA",
+                        "Spain"
+                    ],
+                    "genres":      [
+                        "Western"
+                    ],
+                    "director":    "Sergio Leone",
+                    "actors":      [
+                        "Claudia Cardinale",
+                        "Henry Fonda",
+                        "Jason Robards",
+                        "Charles Bronson"
+                    ]
+                  }
+                ]
+  /movies/{id}:
+    get:
+      tags:
+        - movieid
+      summary:                     Get movie based on id
+      operationId:                 findMovie
+      parameters:                  
+        - name:                    id
+          in:                      path
+          type:                    string
+          required:                true
+      responses:
+        "200":
+          description:             Successful resoponse
+          examples:                
+            application/json:      |-
+                {
+                "title":           "Once Upon a Time in the West",
+                "year":            "1968",
+                "rated":           "PG-13",
+                "released":        "-32468400000",
+                "countries":       [
+                    "Italy",
+                    "USA",
+                    "Spain"
+                ],
+                "genres":          [
+                    "Western"
+                ],
+                "director":        "Sergio Leone",
+                "actors":          [
+                    "Claudia Cardinale",
+                    "Henry Fonda",
+                    "Jason Robards",
+                    "Charles Bronson"
+                ]}
