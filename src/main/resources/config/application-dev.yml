@@ -18,6 +18,9 @@ logging:
         ROOT: DEBUG
         com.benz.tutorial.jhipster.gateway: DEBUG
         io.github.jhipster: DEBUG
+        org.hibernate.SQL: DEBUG
+hibernate:
+    dialect: org.hibernate.dialect.PostgreSQLDialect
 
 spring:
     profiles:
@@ -30,6 +33,23 @@ spring:
             enabled: false # we use gulp + BrowserSync for livereload
     jackson:
         serialization.indent_output: true
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        #properties:
+        #    hibernate:
+        #        dialect: org.hibernate.dialect.PostgreSQLDialect
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+          
+              
+    datasource:
+        psql: 
+            platform: postgres
+            url: jdbc:postgresql://localhost:5432/springboot-study-db
+            username: springboot-study-user
+            password: postgres
+            driver-class-name: org.postgresql.Driver
+        
     data:
         mongodb:
             uri: mongodb://localhost:27017
